@@ -71,6 +71,10 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  # Required for Heroku
+  # Note to set this to actual site location
+  config.action_mailer.default_url_options = { host: 'chef-pinteresting.herokuapp.com'}
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
